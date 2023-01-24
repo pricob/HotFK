@@ -20,7 +20,7 @@ font_big = fontEngine('./fonts/large_font_alpha.png')
 
 # FIRST ENTRY
 # Run the game
-#game.run(font_sml, font_big)
+game.run(font_sml, font_big)
 mainClock = game.get_clock()
 
 # DEBUG ? TESTING
