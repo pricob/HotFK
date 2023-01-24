@@ -58,7 +58,6 @@ def menu_loop(mainClock):
     # DEBUG boss
     imp_front_base = pygame.image.load('./resources/monsters/imp/imp_front.png').convert_alpha()
     imp_front = pygame.transform.scale(imp_front_base, (128, 256))
-    imp_rect = imp_front.get_rect()
     imp_pos = [1200, 600]
 
     running = True
@@ -72,11 +71,11 @@ def menu_loop(mainClock):
     player_pos = [960, 500]
 
     player_image = cyclop_front
-    speed = 3
+    speed = 4
 
     # DEBUG Health Bar
     boss_health = 10000
-    hp = healthBar("green", boss_health)
+    hp = healthBar("blue", boss_health)
     hp.create(screen, 150, 0)
 
     while running:
@@ -149,32 +148,3 @@ def menu_loop(mainClock):
         # Update  Frame ------------------------------------------- #
         pygame.display.flip()
         mainClock.tick(60)
-
-
-
-
-#################################
-# 
-#
-# if event.type == MOUSEBUTTONDOWN:
-#     if event.button == 1:
-#         # degs = atan2(player_origin[1] - mouse_pos[1], mouse_pos[0] - player_origin[0])
-#         # angle = int((degs * 57.2958 + 360) % 360)
-#
-#
-
-            #if 46 < angle <= 135:
-            #    # top
-            #    color = (255, 0, 0)
-            #elif 136 < angle <= 225:
-            #    # left
-            #    color = (0, 255, 0)
-            #elif 226 < angle <= 315:
-            #    # bottom
-            #    color = (0, 0, 255)
-            #else:
-            #    # right
-            #    color = (0, 255, 255)
-
-            #print(angle)
-            # pygame.draw.line(screen, color, player_origin, (mouse_pos[0], mouse_pos[1]), 3)

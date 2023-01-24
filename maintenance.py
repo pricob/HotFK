@@ -7,9 +7,12 @@ def build():
     pass
 
 def clear_project():
-    location = "./"
-    dir = "__pycache__"
+    try:
+        location = "./"
+        dir = "__pycache__"
 
-    path = os.path.join(location, dir)
+        path = os.path.join(location, dir)
 
-    shutil.rmtree(path)
+        shutil.rmtree(path)
+    except:
+        print("Cache could not be removed")
