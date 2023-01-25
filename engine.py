@@ -123,9 +123,8 @@ class gameEngine:
             pygame.display.update()
             self.mainClock.tick(60)
 
-    def config(self, settings, available_res):
+    def config(self, settings):
         self.settings = settings
-        self.available_res = available_res
     
     def reset_settings(self):
         self.settings = {"fps": 60, "default-width": 384, "default-height": 216, "fullscreen": False, "offline": True, "DEBUG": True}

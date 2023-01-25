@@ -68,8 +68,8 @@ class healthBar:
                 var.replace((166,166,166),(217,87,99))
             
             elif color == "blue":
-                var.replace((134,134,134),(78, 144, 199))
-                var.replace((166,166,166),(50, 105, 150))
+                var.replace((134,134,134),(50, 105, 150))
+                var.replace((166,166,166),(78, 144, 199))
             
             else:
                 pass

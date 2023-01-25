@@ -33,11 +33,8 @@ def colorize(image, newColor):
 
 def main():
     screen = pg.display.set_mode((640, 480))
-    clock = pg.time.Clock()
+    dt = clock = pg.time.Clock()
 
-    # Uncomment this for a non-translucent surface.
-    # surface = pg.Surface((100, 150), pg.SRCALPHA)
-    # pg.draw.circle(surface, pg.Color(40, 240, 120), (50, 50), 50)
     surface = pg.image.load('./fonts/large_font.png')
     surface.set_colorkey((0, 0, 0))
     surface = pg.transform.rotozoom(surface, 0, 2)
