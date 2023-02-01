@@ -15,4 +15,14 @@ def clear_project():
 
         shutil.rmtree(path)
     except:
-        print("Cache could not be removed")
+        print("Main cache could not be removed")
+    
+    try:
+        location = "./classes"
+        dir = "__pycache__"
+
+        path = os.path.join(location, dir)
+
+        shutil.rmtree(path)
+    except:
+        print("Class cache could not be removed")
