@@ -14,7 +14,7 @@ class healthBar:
         self.middle_fill = pygame.image.load('./resources/health/fill_middle.png').convert_alpha()
         self.right_fill = pygame.image.load('./resources/health/fill_right.png').convert_alpha()
         self.update_color(color)
-        
+
         self.tile_size = self.middle_fill.get_width()
         self.length = 86
         self.total_length = self.left_fill.get_width() + self.tile_size * self.length - self.tile_size + self.right_fill.get_width()

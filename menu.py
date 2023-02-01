@@ -7,6 +7,7 @@ from health import healthBar
 
 from classes.player import Player
 from classes.bullet import Bullet
+from classes.enemy import Enemy
 
 # MENU LOOP
 def menu_loop(mainClock):
@@ -15,14 +16,15 @@ def menu_loop(mainClock):
     
     player = Player(960, 500)
 
-    # DEBUG boss
+    enemy = Enemy(1200, 600, "Mage", 10000)
+
     imp_front_base = pygame.image.load('./resources/monsters/imp/imp_front.png').convert_alpha()
     imp_front = pygame.transform.scale(imp_front_base, (128, 256))
-    imp_pos = [1200, 600]
 
     running = True
     screen = pygame.display.get_surface()
     background = pygame.Surface((1920, 1080))
+    
     for i in range(1920//32):
         for j in range(1080//32):
             background.blit(debug_tile, (32*i, 32*j))
@@ -30,9 +32,8 @@ def menu_loop(mainClock):
     bullets = []
 
     player_image = player.get_oriented()
+    boss_health = 1000
 
-    # DEBUG Health Bar
-    boss_health = 10000
     hp = healthBar("blue", boss_health)
     hp.create(screen, 150, 0)
 
@@ -76,7 +77,7 @@ def menu_loop(mainClock):
         
         # Blit Textures
         if boss_health >= 0:
-            screen.blit(imp_front, (imp_pos[0], imp_pos[1]))
+            enemy.update(screen)
 
         player.update(screen)
         

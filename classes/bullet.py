@@ -35,4 +35,3 @@ class Bullet:
 
     def get_rect(self):
         return self.bullet.get_rect(center = self.pos)
-
