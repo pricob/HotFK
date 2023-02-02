@@ -44,7 +44,7 @@ def menu_loop(game):
                             console_push("Clicked offline")
                     if online_banner_rect.collidepoint(mx, my):
                         if game.debug_mode:
-                            print("Clicked online")
+                            console_push("Clicked online")
 
         # Render ------------------------------------------------- #
         screen.blit(offline_banner, offline_banner_rect)
