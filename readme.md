@@ -2,7 +2,7 @@
 
 ## Changelog
 
-### v. pre-0.0.2a
+### v. pre-0.0.3a
 - Older backup files moved to cloud and now require a key to access.
 - Cache removal for multiple folders.
 - Other unused resources removed.
