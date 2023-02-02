@@ -45,5 +45,6 @@ We will continue to work on further updates and a way to deliver a beta version 
 - [ ] Demo level (Singleplayer)
 - [ ] Player
 - [ ] Enemy
+- [ ] Player inventory
 
 > More mechanics and features to be announced!
