@@ -32,3 +32,15 @@ I have a Suggestion or an Issue to report
 ## Wrapping things up
 And finally, I repeat once again, if there is anything else let us know.
 We will continue to work on further updates and a way to deliver a beta version as soon as possible.
+
+## TODO
+### Next
+- [ ] Rework Font System
+- [ ] Animate and decorate Main Menu
+- [ ] Options page
+### Future
+- [ ] Demo level (Singleplayer)
+- [ ] Player
+- [ ] Enemy
+
+> More mechanics and features to be announced!
