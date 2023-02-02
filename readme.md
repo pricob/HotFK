@@ -1,8 +1,11 @@
 # Welcome to Heroes of the Fallen Kingdom - HOTFK -
 
 ## Changelog
-
 ### v. pre-0.0.3a
+- More files removed (some will return later)
+- Better game-loop and events handling
+
+### v. pre-0.0.2a
 - Older backup files moved to cloud and now require a key to access.
 - Cache removal for multiple folders.
 - Other unused resources removed.
