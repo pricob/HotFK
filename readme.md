@@ -51,9 +51,9 @@ We will continue to work on further updates and a way to deliver a beta version 
 - [ ] Animate and decorate Main Menu
 - [ ] Options page
 ### Future
-- [ ] Demo level (Singleplayer)
-- [ ] Player
-- [ ] Enemy
+- [ ] Tutorial level (Singleplayer)
+- [ ] Player, Enemy, AI
 - [ ] Player inventory
+- [ ] Account management
 
 > More mechanics and features to be announced!
