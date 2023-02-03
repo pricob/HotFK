@@ -6,7 +6,7 @@
 - Started the accounts system
 
 <details closed>
-<summary><span style="color:grey">Older Releases</</summary>
+<summary><span style="color:grey">Older Releases</span></summary>
 
 ### v. pre-0.0.3a
 - More files removed (some will return later)
