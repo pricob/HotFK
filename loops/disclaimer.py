@@ -4,10 +4,10 @@ import sys
 
 from maintenance import clear_project
 
-def disclaimer_loop(game):
+def disclaimer_loop(game_engine):
 
     screen = pygame.display.get_surface()
-    mainClock = game.get_mainClock()
+    mainClock = game_engine.get_mainClock()
     progress = 0
 
     # LOOP START

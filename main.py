@@ -13,15 +13,15 @@ settings = {
     "fullscreen": True, 
     "offline": True, 
     "debug-mode": True, 
-    'version': "pre-0.0.3a"
+    'version': "pre-0.0.4a"
 }
 
 # Engine Instance -------------------------------------------- #
-game = gameEngine(settings)
+game_engine = gameEngine(settings)
 
 # Run the game ----------------------------------------------- #
-disclaimer_loop(game)
-menu_loop(game)
+disclaimer_loop(game_engine)
+menu_loop(game_engine)
 
 # Clear the project temporary files -------------------------- #
 clear_project()

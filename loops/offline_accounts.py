@@ -1,21 +1,29 @@
 # Setup Python ----------------------------------------------- #
 import pygame, sys
-
-from maintenance import clear_project, console_push, load_image
+from maintenance import clear_project, load_image, console_push
 from classes.button import Button
-from loops.offline_accounts import offline_account_loop
 
-# Menu Loop -------------------------------------------------- #
-def menu_loop(game_engine):
+# Offline accounts ------------------------------------------- #
+def offline_account_loop(game_engine):
     
     screen = pygame.display.get_surface()
     mainClock = game_engine.get_mainClock()
-
-    offline_banner = Button(450, 270, "resources/offline_banner.png", "resources/offline_banner_hover.png", 5)
-    online_banner = Button(1070, 270, "resources/online_banner.png", "resources/online_banner_hover.png", 5)
-
-    background = load_image("resources/background.png")
     
+    background = load_image("resources/background.png")
+
+    accounts_list = {1: None, 2: None, 3: None, 4: None, 5: None}
+    
+    all_empty = False
+
+    for i in range (1, 6):
+        if accounts_list[i] == None:
+            if not all_empty:
+                accounts_list[i] = Button(550, 100 + i * 120, "resources/new.png", "resources/new_hover.png", 2)
+                all_empty = True
+            else:
+                accounts_list[i] = Button(550, 100 + i * 120, "resources/empty.png", "resources/empty_hover.png", 2)
+
+
     # LOOP START
     running = True
     while running:
@@ -23,15 +31,9 @@ def menu_loop(game_engine):
         screen.fill(0)
         screen.blit(background, (0, 0))
 
-        # Draw buttons
-        if offline_banner.draw(screen):
-            if game_engine.debug_mode:
-                console_push("offline clicked")
-                offline_account_loop(game_engine)
-
-        if online_banner.draw(screen):
-            if game_engine.debug_mode:
-                console_push("online clicked")
+        for i in range(1, 6):
+           if accounts_list[i].draw(screen):
+            console_push(f"pressed button {i}")
 
         # Events ------------------------------------------------- #
         for event in pygame.event.get():
@@ -43,9 +45,6 @@ def menu_loop(game_engine):
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     running = False
-                    pygame.quit()
-                    clear_project()
-                    sys.exit()
 
         # Update ------------------------------------------------- #
         pygame.display.flip()
