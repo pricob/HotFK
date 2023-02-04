@@ -1,5 +1,5 @@
 # Setup Python ----------------------------------------------- #
-from pygame import init, display, time, FULLSCREEN
+from pygame import init, display, time, FULLSCREEN, mouse
 
 # CLass Block ------------------------------------------------ #
 class gameEngine:
@@ -14,11 +14,9 @@ class gameEngine:
         self.debug_mode = settings['debug-mode']
         self.version = settings['version']
         self.mainClock = time.Clock()
+        mouse.set_visible(False)
 
         if self.fullscreen:
             self.screen = display.set_mode((self.width, self.height), FULLSCREEN)
         else:
             self.screen = display.set_mode((self.width, self.height))
-        
-    def get_mainClock(self):
-        return self.mainClock

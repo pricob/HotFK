@@ -1,7 +1,7 @@
 # Setup Python ----------------------------------------------- #
 from game_engine import gameEngine
 from maintenance import clear_project
-
+from pygame import mouse
 from loops.disclaimer import disclaimer_loop
 from loops.menu import menu_loop
 
@@ -13,7 +13,7 @@ settings = {
     "fullscreen": True, 
     "offline": True, 
     "debug-mode": True, 
-    'version': "pre-0.0.4a"
+    'version': "pre-0.0.5a"
 }
 
 # Engine Instance -------------------------------------------- #

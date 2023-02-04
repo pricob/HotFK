@@ -3,10 +3,23 @@ import shutil
 import os
 import json
 
-from pygame import image, transform
+from pygame import image, transform, mouse
 from data.template import data as template
 
 json = json.dumps(template)
+
+
+def custom_mouse():
+    cursor = image.load("resources/mouse.png").convert_alpha()
+    cursor.set_colorkey((0, 0, 0))
+    rect = cursor.get_rect()
+    return cursor, rect
+
+def custom_mouse_highlight():
+    cursor = image.load("resources/mouse_highlight.png").convert_alpha()
+    cursor.set_colorkey((0, 0, 0))
+    rect = cursor.get_rect()
+    return cursor, rect
 
 # Funcs ------------------------------------------------------ #
 def load_image(path):

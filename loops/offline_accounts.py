@@ -1,14 +1,17 @@
 # Setup Python ----------------------------------------------- #
 import pygame, sys
-from maintenance import clear_project, load_image, console_push
+from maintenance import clear_project, load_image, console_push, custom_mouse_highlight
 from classes.button import Button
 
 # Offline accounts ------------------------------------------- #
 def offline_account_loop(game_engine):
     
+    cursor_img, cursor_rect = custom_mouse_highlight()
+
     screen = pygame.display.get_surface()
-    mainClock = game_engine.get_mainClock()
+    mainClock = game_engine.mainClock
     
+
     background = load_image("resources/background.png")
 
     accounts_list = {1: None, 2: None, 3: None, 4: None, 5: None}
@@ -27,9 +30,13 @@ def offline_account_loop(game_engine):
     # LOOP START
     running = True
     while running:
-        # Reset Frame
+
+        # Reset Frame -------------------------------------------- #
         screen.fill(0)
-        screen.blit(background, (0, 0))
+        mx, my = pygame.mouse.get_pos()
+        cursor_rect.center = (mx, my)
+
+        screen.blit(background, (mx // 50 - 38, my // 50 - 21))
 
         for i in range(1, 6):
            if accounts_list[i].draw(screen):
@@ -46,6 +53,9 @@ def offline_account_loop(game_engine):
                 if event.key == pygame.K_ESCAPE:
                     running = False
 
+        # Render ------------------------------------------------- #
+        screen.blit(cursor_img, cursor_rect)
+
         # Update ------------------------------------------------- #
         pygame.display.flip()
-        mainClock.tick(60)
+        mainClock.tick(game_engine.fps)

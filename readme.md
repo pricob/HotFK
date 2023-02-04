@@ -1,12 +1,16 @@
 # Welcome to Heroes of the Fallen Kingdom - HOTFK -
 
 ## Changelog
-### v. pre-0.0.4a <span style="color:grey">3/Feb/2023</span>
-- Added 5 slots for offline accounts
-- Started the accounts system
+### v. pre-0.05a <span style="color:grey">4/Feb/2023</span>
+- Added links for Discord and Github in the menu
+- Paralax background
 
 <details closed>
 <summary><span style="color:grey">Older Releases</span></summary>
+
+### v. pre-0.0.4a <span style="color:grey">3/Feb/2023</span>
+- Added 5 slots for offline accounts
+- Started the accounts system
 
 ### v. pre-0.0.3a
 - More files removed (some will return later)
@@ -48,8 +52,9 @@ We will continue to work on further updates and a way to deliver a beta version 
 ## TODO
 ### Next
 - [ ] Rework Font System
-- [ ] Animate and decorate Main Menu
+- [x] Animate and decorate Main Menu
 - [ ] Options page
+- [ ] Fix button collisoions
 ### Future
 - [ ] Tutorial level (Singleplayer)
 - [ ] Player, Enemy, AI
